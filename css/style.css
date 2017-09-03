@@ -1,0 +1,29 @@
+body {
+  font-family: 'Vollkorn', serif;
+  color: 	#336600;
+  font-size: 18px;
+}
+
+body, .jumbotron {
+  background-color: #000033;
+}
+
+h1 a {
+  margin-top:-1%;
+}
+
+.btn-primary {
+  background-color: #336600;
+  border-color: #336600;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active  {
+  background-color: #034500;
+  border-color: #034500;
+  outline: none;
+  padding-top:1%;
+}
+
+thead {
+  background-color: #000033;
+}
