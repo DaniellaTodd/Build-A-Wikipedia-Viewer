@@ -1,21 +1,22 @@
 $("document").ready(function() {
   $("#search-btn").on("click", function() {
-    var term = $("#search-form").val();
-
-    var api =
+    
+    var searchTerm = $("#search-form").val();
+    var wikiApi =
       "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-      term +
+      searchTerm +
       "&format=json&callback=?";
-    $.getJSON(api, function(wiki) {
-      $("#result").empty();
+    
+    $.getJSON(wikiApi, function(link) {
+      $("#link").innerHTML == " ";
 
-      for (var i = 0; i < wiki[1].length; i++) {
-        $("#result").append(
+      for (var i = 0; i < link[1].length; i++) {
+        $("#link").append(
           "<tr><td>" +
-            wiki[1][i] +
+            link[1][i] +
             "</td><td><a href=" +
-            wiki[3][i] +
-            " target=_blank>Wikipedia Link</a></td></tr>"
+            link[2][i] +
+            " target=_blank>Go</a></td></tr>"
         );
       }
     });
